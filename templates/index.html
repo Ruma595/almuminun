@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre l'arabe - Malsi</title>
+</head>
+<body>
+    
+    <div class="text">
+        <h1 class="title">Malsi</h1>
+        <h3 class="subtitle">Apprendre l'Arabe</h3>
+    </div>
+
+    <div class="section">
+        <a class="a" href="{{url_for('alphabet')}}">
+            <div class="bloc">
+                <img src="static/img/alogo.png" alt="Arabic letter" class="alogo">
+                <p class="text-bloc">Alphabet Arabe</p>
+            </div>
+        </a>
+        <a class="a" href="{{url_for('coranpage')}}">
+            <div class="bloc">
+                <img src="static/img/quran.png" alt="Quran" class="qlogo">
+                <p class="text-bloc">Coran en Français, Arabe</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

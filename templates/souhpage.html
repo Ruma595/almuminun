@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="souhbloc">
+        <div class="topbls">
+            <h1 class="topbltitle">Sourate {{souh[1]}} ({{souh[5]}})</h1>
+            <div class="line"></div>
+        </div>
+        <div class="middleblv">
+            {% for i in range(resfr|length)%}
+            <div class="verset">
+                <p class="numv">{{i +1}}</p>
+                <div class="txtverset">
+                    <p class="fr">{{resfr[i]}}</p>
+                    <div class="arabeverset">
+                        <p class="ar">{{resar[i]}}</p>
+                        <p class="phonetic">{{restr[i]}}</p>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+</html>

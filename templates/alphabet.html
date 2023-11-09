@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Alphabet - Malsi</title>
+</head>
+<body>
+
+    <div class="hadithdujour">
+        <div class="blochadith">
+            
+        </div>
+    </div>
+
+    <div class="alphabetcard">
+        <div class="tools">
+            <button onclick="shuffle()" class="randomize">Mélanger</button>
+            <button onclick="location.reload()" class="normal">Reintialiser</button>
+        </div>
+        <section class="alist" id="alist">
+            {%for i in r%}
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="content flip-card-front">
+                        <img class="imgalphabet" src="{{i[3]}}.png" alt="">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1 style="font-size: 3em;">{{i[1]}}</h1>
+                        <p>{{i[2]}}</p> 
+                        <audio controls preload="none" src="/static/sound/{{i[0]}}.mp3"></audio>
+                    </div>
+                </div>
+            </div>
+            {%endfor%}
+        </section>
+    </div>
+    
+    
+    
+    <footer class="foot">
+        <p class="accueil"><a href="{{url_for('index')}}"> <-Accueil</a></p>
+        <ul class="liste">Crédit
+            <li class="sousliste">Islam Ibn Ahmed</li>
+            <li class="sousliste"><a href="https://www.flaticon.com/fr/icones-gratuites/langue-arabe" title="langue arabe icônes">Langue arabe icônes créées par Freepik - Flaticon</a></li>
+            <li class="sousliste">Sound par : <a href="https://www.islamcan.com/learn-arabic/arabic-alphabets.shtml">IslamCan</a></li>
+        </ul>
+    </footer>
+    <script defer>
+        const alist = document.getElementById('alist');
+        const cards = document.querySelectorAll(".flip-card-inner");
+
+        function flipCard() {
+            this.classList.toggle("flip");
+        }
+        cards.forEach((card) => card.addEventListener("click", flipCard));
+        
+        
+        
+        var list = document.querySelector('.alist'), i;
+        function shuffle() {
+            for (i = list.children.length; i >= 0; i--) {
+                list.appendChild(list.children[Math.random() * i | 0]);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Sourate du Coran</title>
+</head>
+<body>
+    <div class="souhbloc">
+        <div class="topbls">
+            <h1 class="topbltitle">Sourate du Coran</h1>
+            <div class="line"></div>
+        </div>
+        <div class="middlebls">
+            {%for re in r%}
+            <div class="suhlist">
+                <h2 class="suhtitle">{{re[1]}}</h2>
+                <h4 class="numsuh">Sourate : {{re[5]}}</h4>
+                <h4 class="numbverset">Versets : {{re[6]}}</h4>
+                <a href="{{url_for('coranpages', id=re[5])}}" class="learnsuh">Voir</a>
+            </div>
+            {%endfor%}
+        </div>
+    </div>
+</body>
+</html>
