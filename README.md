@@ -9,3 +9,6 @@ Finally, it's in French
 # Extra
 If you want to see different version of the mock-up go to: https://www.figma.com/community/file/1304495448886673767/al-muminun<br>
 My favorite is the third version but I don't have the time to code this :(
+
+
+![Preview](https://github.com/Ruma595/almuminun/blob/main/static/img/preview.png)
